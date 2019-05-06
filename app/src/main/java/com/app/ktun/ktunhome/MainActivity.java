@@ -1,12 +1,11 @@
 package com.app.ktun.ktunhome;
 
-import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.ViewPager;
+import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.BottomNavigationView.OnNavigationItemSelectedListener;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,39 +15,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.ImageButton;
 
-import com.app.ktun.ktunhome.Fragments.FragmentStateAdapter;
+
 import com.app.ktun.ktunhome.Fragments.graduateFragment;
 import com.app.ktun.ktunhome.Fragments.homeFragment;
 import com.app.ktun.ktunhome.Fragments.loginFragment;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener, loginFragment.OnFragmentInteractionListener, homeFragment.OnFragmentInteractionListener, graduateFragment.OnFragmentInteractionListener {
+        implements OnNavigationItemSelectedListener, NavigationView.OnNavigationItemSelectedListener, View.OnClickListener, loginFragment.OnFragmentInteractionListener, homeFragment.OnFragmentInteractionListener, graduateFragment.OnFragmentInteractionListener {
 
-    ViewPager fragment_pager;
-    FragmentStateAdapter adapter;
-    ImageButton home_button, student_button, graduate_button;
 
+    Fragment navbar_fragments;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        fragment_pager = findViewById(R.id.adapter_pager);
-        adapter = new FragmentStateAdapter(getSupportFragmentManager());
-        fragment_pager.setAdapter(adapter);
-        home_button = findViewById(R.id.home);
-        student_button = findViewById(R.id.student);
-        graduate_button = findViewById(R.id.graduate);
-        home_button.setOnClickListener(this);
-        student_button.setOnClickListener(this);
-        graduate_button.setOnClickListener(this);
-
-
-
+        BottomNavigationView bottom_navbar = findViewById(R.id.bottom);
+        bottom_navbar.setOnNavigationItemSelectedListener(this);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -110,6 +95,25 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_send) {
 
         }
+        else if(id == R.id.navButtonHome)
+        {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragmentlay, new homeFragment());
+            transaction.commit();
+        }
+        else if(id == R.id.navButtonLogin)
+        {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragmentlay, new loginFragment());
+            transaction.commit();
+        }
+        else if(id == R.id.navButtonGraduate)
+        {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragmentlay, new graduateFragment());
+            transaction.commit();
+        }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -123,11 +127,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onClick(View v) {
-        if(v == this.findViewById(R.id.student))
-            this.fragment_pager.setCurrentItem(0);
-        else if(v == this.findViewById(R.id.home))
-            this.fragment_pager.setCurrentItem(1);
-        else if(v == this.findViewById(R.id.graduate))
-            this.fragment_pager.setCurrentItem(2);
+
     }
 }

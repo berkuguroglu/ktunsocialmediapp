@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navButtonLogin"
+        android:icon="@drawable/ogrenci"
+        android:title="Giriş yap" />
+    <item
+        android:id="@+id/navButtonHome"
+        android:icon="@drawable/anasayfa"
+        android:title="Anasayfa" />
+    <item
+        android:id="@+id/navButtonGraduate"
+        android:icon="@drawable/mezunlar"
+        android:title="Mezun" />
+
+
+
+</menu>

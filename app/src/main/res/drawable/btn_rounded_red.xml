@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:bottom="4.0dip" android:left="4.0dip" android:right="4.0dip" android:top="4.0dip">
+                <shape android:shape="rectangle">
+                    <corners android:bottomLeftRadius="30.0dip" android:bottomRightRadius="30.0dip" android:radius="60.0dip" android:topLeftRadius="30.0dip" android:topRightRadius="30.0dip" />
+                    <solid android:color="@color/material_red" />
+                    <padding android:bottom="0.0dip" android:left="0.0dip" android:right="0.0dip" android:top="0.0dip" />
+                    <size android:width="110.0dip" android:height="40.0dip" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_focused="true">
+        <layer-list>
+            <item android:bottom="4.0dip" android:left="4.0dip" android:right="4.0dip" android:top="4.0dip">
+                <shape android:shape="rectangle">
+                    <corners android:bottomLeftRadius="30.0dip" android:bottomRightRadius="30.0dip" android:radius="60.0dip" android:topLeftRadius="30.0dip" android:topRightRadius="30.0dip" />
+                    <solid android:color="@color/material_red" />
+                    <padding android:bottom="0.0dip" android:left="0.0dip" android:right="0.0dip" android:top="0.0dip" />
+                    <size android:width="110.0dip" android:height="40.0dip" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:bottom="4.0dip" android:left="4.0dip" android:right="4.0dip" android:top="4.0dip">
+                <shape android:shape="rectangle">
+                    <corners android:bottomLeftRadius="30.0dip" android:bottomRightRadius="30.0dip" android:radius="60.0dip" android:topLeftRadius="30.0dip" android:topRightRadius="30.0dip" />
+                    <solid android:color="@color/material_red" />
+                    <padding android:bottom="0.0dip" android:left="0.0dip" android:right="0.0dip" android:top="0.0dip" />
+                    <size android:width="110.0dip" android:height="40.0dip" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

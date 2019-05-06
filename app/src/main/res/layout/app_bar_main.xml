@@ -14,17 +14,19 @@
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#e9e8e8"
-            android:padding="10dp"
-            android:theme="@style/AppTheme">
+            android:background="@android:color/holo_red_dark"
+            android:theme="@style/AppTheme.NoActionBar"
+
+            android:padding="10dp">
 
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                android:theme="@style/AppTheme.NoActionBar"
                 app:logo="@drawable/logo"
-                app:logoDescription="Konya Teknik" />
+                 app:logoDescription="Konya Teknik" />
 
         </android.support.design.widget.AppBarLayout>
 
@@ -35,45 +37,14 @@
 
     </LinearLayout>
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@android:color/background_light"
-        android:theme="@style/AppTheme">
+        app:itemTextColor="@android:color/holo_red_dark"
+        app:menu="@menu/bottom_navbar">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/background_light"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-            <ImageButton
-                android:id="@+id/student"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:adjustViewBounds="false"
-                android:background="?android:attr/selectableItemBackground"
-                app:srcCompat="@drawable/icon_student" />
-
-            <ImageButton
-                android:id="@+id/home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                app:srcCompat="@drawable/icon_home" />
-
-            <ImageButton
-                android:id="@+id/graduate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                app:srcCompat="@drawable/icon_exstudent" />
-        </LinearLayout>
-    </android.support.design.widget.AppBarLayout>
+    </android.support.design.widget.BottomNavigationView>
 
 </android.support.design.widget.CoordinatorLayout>
