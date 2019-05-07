@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_dark"
+            android:theme="@style/AppTheme.NoActionBar"
+
+            android:padding="10dp">
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:theme="@style/AppTheme.NoActionBar"
+                app:logo="@drawable/logo"
+                app:logoDescription="Konya Teknik" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <include
+            layout="@layout/content_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:itemTextColor="@color/material_red"
+        app:menu="@menu/bottom_navbar">
+
+    </android.support.design.widget.BottomNavigationView>
+
+</android.support.design.widget.CoordinatorLayout>

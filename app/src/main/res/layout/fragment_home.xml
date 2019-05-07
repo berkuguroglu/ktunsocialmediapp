@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/lyt_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/shadow"
+        android:elevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="162dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            app:barrierAllowsGoneWidgets="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:id="@+id/SliderDots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewPager"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/slider_ann"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="144dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/btn_rounded_red"
+            android:gravity="center"
+            android:text="DUYURU"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewPager" />
+
+        <TextView
+            android:id="@+id/slider_date"
+            android:layout_width="86dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/btn_rounded_red"
+            android:gravity="center"
+            android:text="28.03.2019"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="@+id/slider_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewPager"
+            app:layout_constraintVertical_bias="0.65999997" />
+
+        <TextView
+            android:id="@+id/slider_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="8dp"
+            android:text="Rektör Özçelik, ASELSAN Silah Sisteminin Temel Atma Törenine Katıldı."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider_ann" />
+
+        <LinearLayout
+            android:id="@+id/lyt_slider_right"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_weight="1"
+            android:background="@drawable/left_radius_red"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewPager">
+
+            <Button
+                android:id="@+id/vp_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/ic_right_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_slider_left"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/right_radius_red"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewPager">
+
+            <Button
+                android:id="@+id/vp_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/ic_left_arrow" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="241dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lyt_slider"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <Button
+            android:id="@+id/menu_akademik"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_white_oval"
+            android:elevation="20dp"
+            android:paddingLeft="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.031" />
+
+        <Button
+            android:id="@+id/menu_tanitim"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_white_oval"
+            android:elevation="20dp"
+            android:paddingLeft="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.031" />
+
+        <Button
+            android:id="@+id/menu_idaribilimleri"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_white_oval"
+            android:elevation="20dp"
+            android:paddingLeft="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.031" />
+
+        <Button
+            android:id="@+id/menu_fakulteler"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_white_oval"
+            android:elevation="20dp"
+            android:paddingLeft="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/menu_takvim"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_white_oval"
+            android:elevation="20dp"
+            android:paddingLeft="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/menu_lisans"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_white_oval"
+            android:elevation="20dp"
+            android:paddingLeft="26dp"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView15"
+            app:layout_constraintVertical_bias="0.059" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Akademik"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="@+id/menu_akademik"
+            app:layout_constraintStart_toStartOf="@+id/menu_akademik"
+            app:layout_constraintTop_toBottomOf="@+id/menu_akademik" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Tanıtım"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="@+id/menu_tanitim"
+            app:layout_constraintHorizontal_bias="0.527"
+            app:layout_constraintStart_toStartOf="@+id/menu_tanitim"
+            app:layout_constraintTop_toBottomOf="@+id/menu_tanitim" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="İdari Bilimler"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="@+id/menu_idaribilimleri"
+            app:layout_constraintHorizontal_bias="0.527"
+            app:layout_constraintStart_toStartOf="@+id/menu_idaribilimleri"
+            app:layout_constraintTop_toBottomOf="@+id/menu_idaribilimleri" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Fakülteler"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="@+id/menu_fakulteler"
+            app:layout_constraintHorizontal_bias="0.541"
+            app:layout_constraintStart_toStartOf="@+id/menu_fakulteler"
+            app:layout_constraintTop_toBottomOf="@+id/menu_fakulteler" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Takvim"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="@+id/menu_takvim"
+            app:layout_constraintStart_toStartOf="@+id/menu_takvim"
+            app:layout_constraintTop_toBottomOf="@+id/menu_takvim" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Lisans"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="@+id/menu_lisans"
+            app:layout_constraintStart_toStartOf="@+id/menu_lisans"
+            app:layout_constraintTop_toBottomOf="@+id/menu_lisans" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

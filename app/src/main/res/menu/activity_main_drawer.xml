@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/rektorluk"
+            android:icon="@drawable/ic_action_point"
+            android:title="Rektörlük" />
+        <item
+            android:id="@+id/tanitim"
+            android:icon="@drawable/ic_action_point"
+            android:title="Tanıtım" />
+        <item
+            android:id="@+id/kurumsal"
+            android:icon="@drawable/ic_action_point"
+            android:title="Kurumsal" />
+        <item
+            android:id="@+id/fakulteler"
+            android:icon="@drawable/ic_action_point"
+            android:title="Fakülteler" />
+        <item
+            android:id="@+id/lisans"
+            android:icon="@drawable/ic_action_point"
+            android:title="Lisans" />
+        <item
+            android:id="@+id/lisansustu"
+            android:icon="@drawable/ic_action_point"
+            android:title="Lisansüstü" />
+        <item
+            android:id="@+id/akademiktakvim"
+            android:icon="@drawable/ic_action_point"
+            android:title="Akademik Takvim" />
+        <item
+            android:id="@+id/kutuphane"
+            android:icon="@drawable/ic_action_point"
+            android:title="Kütüphane" />
+        <item
+            android:id="@+id/dergiler"
+            android:icon="@drawable/ic_action_point"
+            android:title="Dergiler" />
+        <item
+            android:id="@+id/kimlik"
+            android:icon="@drawable/ic_action_point"
+            android:title="Kurumsal Kimlik" />
+        <item
+            android:id="@+id/koordinatorlukler"
+            android:icon="@drawable/ic_action_point"
+            android:title="Koordinatörlükler" />
+        <item
+            android:id="@+id/mevzuat"
+            android:icon="@drawable/ic_action_point"
+            android:title="Mevzuat" />
+        <item
+            android:id="@+id/konum"
+            android:icon="@drawable/ic_action_point"
+            android:title="Konum" />
+        <item
+            android:id="@+id/iletisim"
+            android:icon="@drawable/ic_action_point"
+            android:title="İletişim" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
